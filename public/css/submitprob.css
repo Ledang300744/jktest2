@@ -1,0 +1,72 @@
+
+.submit-container{
+    
+    height: 100%;
+    width: 50%;
+    border-left: 1px solid rgb(221, 221, 221);
+    border-right: 1px solid rgb(221, 221, 221);
+    float: left;
+    text-align: center;
+}
+
+
+.display{
+    height: 950px;
+    min-height: 800px;
+    display: flex;
+}
+.display-header-row {
+    height: 100%;
+    width: 4%;
+    border-left: 1px solid rgb(221, 221, 221);
+    border-right: 1px solid rgb(221, 221, 221);
+    float: left;
+}
+.display-left {
+    
+    height: 100%;
+    width: 30%;
+    border-left: 1px solid rgb(221, 221, 221);
+    border-right: 1px solid rgb(221, 221, 221);
+    float: center;
+}
+
+.display-right {
+
+    height: 100%;
+    width: 65%;
+    border-left: 1px solid rgb(221, 221, 221);
+    border-right: 1px solid rgb(221, 221, 221);
+    float: right;
+    text-align: center;
+}
+#prob-no {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 25px;
+}
+#editor {
+    font-size: 15px;
+    height: 60%;
+    margin-top:0.5%;
+    margin-bottom: 40px;
+    margin-left: 0.5%;
+    margin-right: 0.5%;
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 1px;
+}
+.submit {
+    text-align: center;
+}
+.btn-md {
+    margin-left: 10px;
+}
+.submit-result {
+    width: 70%;
+    margin-bottom: 30px;
+    margin-left: 15%;
+}
+#running {
+    margin-left: 45%;
+    font-size: 18px;
+}

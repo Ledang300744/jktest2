@@ -1,0 +1,341 @@
+<style>
+    /* .nav {
+        margin-right: 5px;
+        font-size: 13px;
+    } */
+    .navbar-custom {
+        background-color: rgb(0, 0, 0);
+    }
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-text {
+        color: rgba(255,255,255,.8);
+    }   
+    /* change the link color */
+    .navbar-custom .navbar-nav .nav-link {
+        color: rgba(255,255,255,.5);
+    }
+    /* change the color of active or hovered links */
+    .navbar-custom .nav-item.active .nav-link,
+    .navbar-custom .nav-item:hover .nav-link {
+        color: #ffffff;
+    }
+    #kt_content{
+        padding-bottom:0px;
+    }
+</style>
+
+
+		<!--begin::Header Mobile-->
+		<div id="kt_header_mobile" class="header-mobile">
+			<!--begin::Logo-->
+			<a href="#">
+				<img alt="Logo" src="/photos/favicon.png" class="logo-default max-h-30px" />
+			</a>
+			<!--end::Logo-->
+			<!--begin::Toolbar-->
+			<div class="d-flex align-items-center">
+				<button class="btn p-0 burger-icon burger-icon-left ml-4" id="kt_header_mobile_toggle">
+					<span></span>
+				</button>
+				<button class="btn btn-icon btn-hover-transparent-white p-0 ml-3" id="kt_header_mobile_topbar_toggle">
+					<span class="svg-icon svg-icon-xl">
+						<!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg-->
+						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+							<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<polygon points="0 0 24 0 24 24 0 24" />
+								<path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z" fill="#000000" fill-rule="nonzero" opacity="0.3" />
+								<path d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z" fill="#000000" fill-rule="nonzero" />
+							</g>
+						</svg>
+						<!--end::Svg Icon-->
+					</span>
+				</button>
+			</div>
+			<!--end::Toolbar-->
+		</div>
+		<!--end::Header Mobile-->
+        <!--begin::Header-->
+        <div id="kt_header" class="header header-fixed">
+            <!--begin::Container-->
+            <div class="container d-flex align-items-stretch justify-content-between">
+                <!--begin::Left-->
+                <div class="d-flex align-items-stretch mr-3">
+                    <!--begin::Header Logo-->
+                    <div class="header-logo">
+                        <a href="#">
+                            <img alt="Logo" src="/photos/favicon.png" class="logo-default max-h-70px" />
+                            <!-- <img alt="Logo" src="/photos/favicon.png" class="logo-sticky max-h-70px" /> -->
+                        </a>
+                    </div>
+                    <!--end::Header Logo-->
+                    <!--begin::Header Menu Wrapper-->
+        <div class="header-menu-wrapper header-menu-wrapper-left" id="kt_header_menu_wrapper">
+            <!--begin::Header Menu-->
+            <div id="kt_header_menu" class="header-menu header-menu-left header-menu-mobile header-menu-layout-default">
+                <!--begin::Header Nav-->
+                <ul class="menu-nav">
+                    <li class="menu-item menu-item-rel" data-menu-toggle="click" aria-haspopup="true">
+                        <a href="/" class="menu-link">
+                            <span class="menu-text">Trang chủ</span>
+                            <i class="menu-arrow"></i>
+                        </a>
+                        <!--<div class="menu-submenu menu-submenu-classic menu-submenu-left">
+                            <ul class="menu-subnav">
+                                <li class="menu-item menu-item-active" aria-haspopup="true">
+                                    <a href="index.html" class="menu-link">
+                                        <span class="menu-text">Latest Updated</span>
+                                        <span class="menu-desc"></span>
+                                    </a>
+                                </li>
+                                <li class="menu-item" aria-haspopup="true">
+                                    <a target="_blank" href="https://preview.keenthemes.com/metronic/demo2/builder.html" class="menu-link">
+                                        <span class="menu-text">Layout Builder</span>
+                                        <span class="menu-desc"></span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>-->
+                    </li>
+                    <li class="menu-item menu-item-rel"  aria-haspopup="true">
+                        <a href="/problems/all" class="menu-link">
+                            <span class="menu-text">Bài tập</span>
+                            <span class="menu-desc"></span>
+                            <i class="menu-arrow"></i>
+                        </a>      
+                    </li>
+                    <li class="menu-item menu-item-rel"  aria-haspopup="true">
+                        <a href="/choose_subjects" class="menu-link">
+                            <span class="menu-text">Làm bài theo môn học</span>
+                            <span class="menu-desc"></span>
+                            <i class="menu-arrow"></i>
+                        </a>
+        
+                    </li>
+                    <!--
+                    <li class="menu-item menu-item-rel"  aria-haspopup="true">
+                                    <a href="/user/suggestions" class="menu-link">
+                                        <span class="menu-text">Gợi ý bài tập</span>
+                                        <span class="menu-desc"></span>
+                                        <i class="menu-arrow"></i>
+                                    </a>
+        
+                                </li>
+                    -->
+        
+                    <li class="menu-item menu-item-rel"  aria-haspopup="true">
+                        <a href="/contests" class="menu-link">
+                            <span class="menu-text">Cuộc thi</span>
+                            <span class="menu-desc"></span>
+                            <i class="menu-arrow"></i>
+                        </a>
+        
+                    </li>
+                    <li class="menu-item menu-item-rel"  aria-haspopup="true">
+                        <a href="/rankings" class="menu-link">
+                            <span class="menu-text">Xếp Hạng</span>
+                            <span class="menu-desc"></span>
+                            <i class="menu-arrow"></i>
+                        </a>
+        
+                    </li>
+                    <li class="menu-item menu-item-rel"  aria-haspopup="true">
+                        <a href="/ide" class="menu-link">
+                            <span class="menu-text">Biên dịch</span>
+                            <span class="menu-desc"></span>
+                            <i class="menu-arrow"></i>
+                        </a>
+        
+                    </li>
+                    <li class="menu-item menu-item-rel"  aria-haspopup="true">
+                        <a href="/viewfileuser" class="menu-link">
+                            <span class="menu-text">Tài liệu</span>
+                            <span class="menu-desc"></span>
+                            <i class="menu-arrow"></i>
+                        </a>
+        
+                    </li>
+        
+                
+                </ul>
+                <!--end::Header Nav-->
+            </div>
+            <!--end::Header Menu-->
+        </div>
+        <!--end::Header Menu Wrapper-->
+                </div>
+                <!--end::Left-->
+                <!--begin::Topbar-->
+                <div class="topbar">
+                    <!--begin::Admin-->
+                
+                
+                
+                
+                
+                    <% if (locals.user && locals.user.isAdmin === true) { %>
+                        <div class="dropdown">
+                            <!--begin::Toggle-->
+                            <div class="topbar-item">
+                                <div class="btn btn-icon btn-hover-transparent-white d-flex align-items-center btn-lg px-md-2 w-md-auto">
+                                    <a href="/admin/manage_question" class="menu-link">
+                                        <span class="menu-text text-white">Quản trị</span>
+                                        <span class="menu-desc"></span>
+                                        <i class="menu-arrow"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--end::Toggle-->
+                        </div>
+                        <% } %>
+                        <% if (locals.user) { %>
+                        <!--end::Admin-->
+        
+        
+                            <!--end::Languages-->
+                            <!--begin::User-->
+                            <div class="dropdown">
+                                <!--begin::Toggle-->
+                                <div class="topbar-item">
+                                    <div class="btn btn-icon btn-hover-transparent-white d-flex align-items-center btn-lg px-md-2 w-md-auto" id="kt_quick_user_toggle">
+                                        <span class="text-white opacity-70 font-weight-bold font-size-base d-none d-md-inline mr-1">Xin chào </span>
+                                        <span class="text-white opacity-90 font-weight-bolder font-size-base d-none d-md-inline mr-4"><%= locals.user.name %></span>
+                                    
+                                    </div>
+                                </div>
+                                <!--end::Toggle-->
+                            </div>
+                            <!--end::User-->
+                            <% include user_pannel %> 
+        
+                        
+                        <% } else { %>
+                            <div class="topbar-item">
+                                <div class="btn btn-icon btn-hover-transparent-white d-flex align-items-center btn-lg px-md-2 w-md-auto" data-toggle="modal" data-target="#loginModal">
+                                    Đăng nhập
+                                </div>
+                            </div>
+                            <div class="topbar-item">
+                                <div class="btn btn-icon btn-hover-transparent-white d-flex align-items-center btn-lg px-md-2 w-md-auto" data-toggle="modal" data-target="#signupModal">
+                                    Đăng ký                       
+                                </div>
+                            </div>       
+        
+        
+                        <% } %>
+                        
+                        
+                </div>
+                <!--end::Topbar-->
+            </div>
+            <!--end::Container-->
+        </div>
+        <!--end::Header-->
+
+
+
+
+
+        <!-- LOGIN FORM -->
+
+        <div class="modal fade row" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog col-sm-9 col-md-7 col-lg-5 mx-auto" role="document">
+            <div class="modal-content card card-signin my-5">
+                    <div class="card-body">
+                    
+                        <h5 class="card-title text-center">Đăng nhập</h5>                   
+                        <!-- <span aria-hidden="true">&times;</span> -->
+                        <form action="/user/login" method="post" class="form-signin" id="loginform">
+                            <div class="form-group">
+                                <label for="username" class="sr-only">Tài khoản</label>
+                                <input type="text" name="username" id="inputEmailSignIn" class="form-control" placeholder="Username" required autofocus>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPasswordSignIn" class="sr-only">Mật khẩu</label>
+                                <input type="password" name="password" id="inputPasswordSignIn" class="form-control" placeholder="Password" required>
+                            </div>
+                        
+                        
+                            <input type="submit" name="" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" value="Đăng nhập">
+                            <hr class="my-4">
+                            <p class="mt-5 mb-3 text-muted">Quên mật khẩu ?:<a class="close-modal" data-toggle="modal" href="#passwordReset">Lấy lại mật khẩu .</a></p>
+                            <p class="mt-5 mb-3 text-muted">Bạn không có tài khoản ?:<a class="close-modal" data-toggle="modal" href="#signupModal"> Đăng ký ngay!!!</a></p>
+                            <label id="errormsg" class="errmsg"></label>
+     
+                        </form>
+        
+                    </div>
+        
+            </div>
+            </div>     
+        </div>
+        
+        <!--Password Reset-->
+        <div class="modal fade" id="passwordReset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content card card-signin my-5">
+                    <div class="card-body">
+                        <h1 class="h3 mb-3 font-weight-normal" style="text-align: center;" >Lấy Lại mật khẩu.</h1>
+                        <p class="mt-5 mb-3 text-muted">Bạn vui lòng điền đầy đủ thông tin. Đường link lấy lại mật khẩu sẽ được gửi vào Email nhập ở phía dưới.</p>
+                        <p class="mt-5 mb-3 text-muted"><b>Bạn vui lòng vào kiểm tra trong Email.</b></p>
+                    
+                        <form action="/user/passwordReset" method="post" class="form-signin" id ="passwordResetForm">
+                            <div class="form-group">
+                                <label for="name" class="sr-only">Tài khoản</label>
+                                <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="sr-only">Email</label>
+                                <input type="email" name="email" id="inputEmailSignUp" class="form-control" placeholder="Email" required autofocus> 
+                            </div>
+                            <input type="submit" name="" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" value="Gủi đường link qua email">
+                        </form>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+
+        <!-- SIGNUP FORM -->
+
+        <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content card card-signin my-5">
+                    <div class="card-body">
+                        <h1 class="h3 mb-3 font-weight-normal" style="text-align: center;" >Đăng ký</h1>
+                        <form action="/user/signup" method="post" class="form-signin" id ="signupform">
+                            <div class="form-group">
+                                <label for="name" class="sr-only">Tài khoản</label>
+                                <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="sr-only">Tên người dùng</label>
+                                <input type="text" name="name" id="inputName" class="form-control" placeholder="Name" required autofocus>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="sr-only">Email</label>
+                                <input type="email" name="email" id="inputEmailSignUp" class="form-control" placeholder="Email" required autofocus> 
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPasswordSignIn" class="sr-only">Mật khẩu</label>
+                                <input type="password" name="password" id="inputPasswordSignIn" class="form-control" placeholder="Password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPasswordSignUp" class="sr-only">Xác nhận mật khẩu</label>
+                                <input type="password" name="password2" id="inputPasswordSignUp2" class="form-control" placeholder="Confirm Password" required>
+                            </div>
+                        
+                            <input type="submit" name="" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" value="Đăng kí">
+                            <p class="mt-5 mb-3 text-muted">Bạn đã có tài khoản? <a class="close-modal" data-toggle="modal" href="#loginModal"> Đăng nhập ngay!</a></p>
+                            <label id="errormsg2" class="errmsg"></label>
+                        </form>
+                        </div>
+                    </div>
+                
+            </div>
+        </div>
+
+
+
+
+
+

@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://localhost:8080/problems/all -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Problem Set | CodeRace</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="./Problem Set _ CodeRace_files/jquery.dataTables.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" type="text/css" href="./Problem Set _ CodeRace_files/sheet.css">
+    <link href="./Problem Set _ CodeRace_files/css" rel="stylesheet">
+    <link rel="stylesheet" href="./Problem Set _ CodeRace_files/bulma.min.css">
+    <script src="./Problem Set _ CodeRace_files/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="./Problem Set _ CodeRace_files/handlebars.js"></script>
+    <link rel="stylesheet" type="text/css" href="./Problem Set _ CodeRace_files/grid.css">
+</head>
+<body>
+    <header>
+        
+    <link href="./Problem Set _ CodeRace_files/css2" rel="stylesheet">
+    <link href="./Problem Set _ CodeRace_files/css2(1)" rel="stylesheet">
+    <link rel="stylesheet" href="./Problem Set _ CodeRace_files/bulma.min.css">
+    <link rel="stylesheet" href="./Problem Set _ CodeRace_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./Problem Set _ CodeRace_files/datatables.min.css">
+ 
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./Problem Set _ CodeRace_files/footer.css">
+    <link rel="stylesheet" href="./Problem Set _ CodeRace_files/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="./Problem Set _ CodeRace_files/signin.css">
+
+
+<style>
+    /* .nav {
+        margin-right: 5px;
+        font-size: 13px;
+    } */
+    .navbar-custom {
+        background-color: rgb(0, 0, 0);
+    }
+    .navbar-custom .navbar-brand,
+    .navbar-custom .navbar-text {
+        color: rgba(255,255,255,.8);
+    }   
+    /* change the link color */
+    .navbar-custom .navbar-nav .nav-link {
+        color: rgba(255,255,255,.5);
+    }
+    /* change the color of active or hovered links */
+    .navbar-custom .nav-item.active .nav-link,
+    .navbar-custom .nav-item:hover .nav-link {
+        color: #ffffff;
+    }
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+    <a class="navbar-brand" href="http://localhost:8080/">CodeRace</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8080/">
+                    <i class="fa fa-home"></i>
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8080/problems/all">
+                    <i class="fa fa-pencil"></i>
+                    Practice
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8080/contests">
+                    <i class="fa fa-flag-checkered"></i>
+                    Contests
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8080/rankings">
+                    <i class="fa fa-trophy"></i>
+                    Rankings
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8080/ide">
+                    <i class="fa fa-wrench"></i>
+                    IDE
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost:8080/viewfileuser">
+                    <i class="fa fa-file"></i>
+                    Document
+                </a>
+            </li>
+        </ul>
+        <span class="navbar-text">
+            <ul class="navbar-nav mr-auto">
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#loginModal">
+                        <i class="fa fa-sign-in"></i>
+                        Sign In
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-toggle="modal" data-target="#signupModal">
+                        <i class="fa fa-user-plus"></i>
+                        Register
+                    </a>
+                </li>
+                
+            </ul>
+        </span>
+    </div>
+</nav>
+
+<!-- LOGIN FORM -->
+
+<div class="modal fade row" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog col-sm-9 col-md-7 col-lg-5 mx-auto" role="document">
+       <div class="modal-content card card-signin my-5">
+            <div class="card-body">
+
+                <h5 class="card-title text-center">Sign In</h5>                   
+                <!-- <span aria-hidden="true">&times;</span> -->
+                <form action="http://localhost:8080/user/login" method="post" class="form-signin" id="loginform">
+                    <div class="form-group">
+                        <label for="username" class="sr-only">Username</label>
+                        <input type="text" name="username" id="inputEmailSignIn" class="form-control" placeholder="Username" required="" autofocus="">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPasswordSignIn" class="sr-only">Password</label>
+                        <input type="password" name="password" id="inputPasswordSignIn" class="form-control" placeholder="Password" required="">
+                    </div>
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Remember password</label>
+                    </div>
+
+                    <input type="submit" name="" class="btn btn-lg btn-primary btn-block text-uppercase" value="Sign in">
+                    <hr class="my-4">
+                    <p class="mt-5 mb-3 text-muted">Don't have an Account? <a class="close-modal" data-toggle="modal" href="http://localhost:8080/problems/all#signupModal"> Sign Up Now!</a></p>
+                    <label id="errormsg" class="errmsg"></label>
+                   
+                </form>
+            
+            </div>
+        
+       </div>
+    </div>     
+</div>
+                    
+
+
+<!-- SIGNUP FORM -->
+
+<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content card card-signin my-5">
+            <div class="card-body">
+                <h1 class="h3 mb-3 font-weight-normal" style="text-align: center;">Sign Up</h1>
+                <form action="http://localhost:8080/user/signup" method="post" class="form-signin" id="signupform">
+                    <div class="form-group">
+                        <label for="name" class="sr-only">Username</label>
+                        <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required="" autofocus="">
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="sr-only">Name</label>
+                        <input type="text" name="name" id="inputName" class="form-control" placeholder="Name" required="" autofocus="">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="sr-only">Email</label>
+                        <input type="email" name="email" id="inputEmailSignUp" class="form-control" placeholder="Email" required="" autofocus=""> 
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPasswordSignIn" class="sr-only">Password</label>
+                        <input type="password" name="password" id="inputPasswordSignIn" class="form-control" placeholder="Password" required="">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPasswordSignUp" class="sr-only">Confirm Password</label>
+                        <input type="password" name="password2" id="inputPasswordSignUp2" class="form-control" placeholder="Confirm Password" required="">
+                    </div>
+                    <div class="custom-control custom-check    &lt;script type=" text="" javascript"="" src="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.js">m-control-input" id="customCheck1"&gt;
+                        <label class="custom-control-label" for="customCheck1">Remember password</label>
+                    </div>
+                    <input type="submit" name="" class="btn btn-lg btn-primary btn-block text-uppercase" value="Sign Up">
+                    <p class="mt-5 mb-3 text-muted">Already have an Account? <a class="close-modal" data-toggle="modal" href="http://localhost:8080/problems/all#loginModal"> Sign In Now!</a></p>
+                    <label id="errormsg2" class="errmsg"></label>
+                </form>
+                </div>
+            </div>
+
+    </div>
+</div>
+
+<script src="./Problem Set _ CodeRace_files/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="./Problem Set _ CodeRace_files/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="./Problem Set _ CodeRace_files/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="./Problem Set _ CodeRace_files/bootstrap.bundle.min.js" integrity="sha256-Xt8pc4G0CdcRvI0nZ2lRpZ4VHng0EoUDMlGcBSQ9HiQ=" crossorigin="anonymous"></script>
+<script src="./Problem Set _ CodeRace_files/modals_change.js"></script>
+<script type="text/javascript" src="./Problem Set _ CodeRace_files/datatables.min.js"></script>
+    </header>
+    <div class="grid-content content">
+        <div class="box">
+
+            <div class="container">
+                <div class="row mt-5">
+                    <div class="col">
+                        <div id="example_wrapper" class="dataTables_wrapper"><div class="dataTables_length" id="example_length"><label>Show <select name="example_length" aria-controls="example" class=""><option value="10">10</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select> entries</label></div><div id="example_filter" class="dataTables_filter"><label>Search:<input type="search" class="" placeholder="" aria-controls="example"></label></div><table id="example" class="display dataTable" width="100%" data-page-length="10" data-order="[[ 1, &quot;asc&quot; ]]" role="grid" aria-describedby="example_info" style="width: 100%;">
+                            <thead>
+                                <tr role="row"><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Id: activate to sort column ascending" style="width: 39px;">Id</th><th class="sorting_asc" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-sort="ascending" aria-label="Name: activate to sort column descending" style="width: 138px;">Name</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Tags: activate to sort column ascending" style="width: 127px;">Tags</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Difficulty: activate to sort column ascending" style="width: 119px;">Difficulty</th><th class="sorting" tabindex="0" aria-controls="example" rowspan="1" colspan="1" aria-label="Successful Submissions: activate to sort column ascending" style="width: 297px;">Successful Submissions</th></tr>
+                            </thead>
+                            <tfoot>
+                                <tr><th rowspan="1" colspan="1">Id</th><th rowspan="1" colspan="1">Name</th><th rowspan="1" colspan="1">Tags</th><th rowspan="1" colspan="1">Difficulty</th><th rowspan="1" colspan="1">Successful Submissions</th></tr>
+                            </tfoot>
+                            <tbody>
+                                
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                                    
+                            <tr role="row" class="odd">
+                                        <td><a href="http://localhost:8080/problem/6">
+                                                6</a></td>
+                                        <td class="sorting_1"><a href="http://localhost:8080/problem/6">
+                                                1</a></td>
+                                        <td>
+                                            
+                                        </td>
+                                        <td>
+                                                0.1
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </td>
+                                        
+                                        
+                                        <td>
+                                            0
+                                        </td>
+                                    </tr><tr role="row" class="even">
+                                        <td><a href="http://localhost:8080/problem/15">
+                                                15</a></td>
+                                        <td class="sorting_1"><a href="http://localhost:8080/problem/15">
+                                                10</a></td>
+                                        <td>
+                                            
+                                        </td>
+                                        <td>
+                                                0.1
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </td>
+                                        
+                                        
+                                        <td>
+                                            0
+                                        </td>
+                                    </tr><tr role="row" class="odd">
+                                        <td><a href="http://localhost:8080/problem/16">
+                                                16</a></td>
+                                        <td class="sorting_1"><a href="http://localhost:8080/problem/16">
+                                                112</a></td>
+                                        <td>
+                                            
+                                        </td>
+                                        <td>
+                                                0.1
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </td>
+                                        
+                                        
+                                        <td>
+                                            0
+                                        </td>
+                                    </tr><tr role="row" class="even">
+                                        <td><a href="http://localhost:8080/problem/17">
+                                                17</a></td>
+                                        <td class="sorting_1"><a href="http://localhost:8080/problem/17">
+                                                13</a></td>
+                                        <td>
+                                            
+                                        </td>
+                                        <td>
+                                                0.1
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </td>
+                                        
+                                        
+                                        <td>
+                                            0
+                                        </td>
+                                    </tr><tr role="row" class="odd">
+                                        <td><a href="http://localhost:8080/problem/18">
+                                                18</a></td>
+                                        <td class="sorting_1"><a href="http://localhost:8080/problem/18">
+                                                14</a></td>
+                                        <td>
+                                            
+                                        </td>
+                                        <td>
+                                                0.1
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </td>
+                                        
+                                        
+                                        <td>
+                                            0
+                                        </td>
+                                    </tr><tr role="row" class="even">
+                                        <td><a href="http://localhost:8080/problem/19">
+                                                19</a></td>
+                                        <td class="sorting_1"><a href="http://localhost:8080/problem/19">
+                                                15</a></td>
+                                        <td>
+                                            
+                                        </td>
+                                        <td>
+                                                0.1
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </td>
+                                        
+                                        
+                                        <td>
+                                            0
+                                        </td>
+                                    </tr><tr role="row" class="odd">
+                                        <td><a href="http://localhost:8080/problem/20">
+                                                20</a></td>
+                                        <td class="sorting_1"><a href="http://localhost:8080/problem/20">
+                                                16</a></td>
+                                        <td>
+                                            
+                                        </td>
+                                        <td>
+                                                0.1
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </td>
+                                        
+                                        
+                                        <td>
+                                            0
+                                        </td>
+                                    </tr><tr role="row" class="even">
+                                        <td><a href="http://localhost:8080/problem/21">
+                                                21</a></td>
+                                        <td class="sorting_1"><a href="http://localhost:8080/problem/21">
+                                                17</a></td>
+                                        <td>
+                                            
+                                        </td>
+                                        <td>
+                                                0.1
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </td>
+                                        
+                                        
+                                        <td>
+                                            0
+                                        </td>
+                                    </tr><tr role="row" class="odd">
+                                        <td><a href="http://localhost:8080/problem/7">
+                                                7</a></td>
+                                        <td class="sorting_1"><a href="http://localhost:8080/problem/7">
+                                                2</a></td>
+                                        <td>
+                                            2
+                                        </td>
+                                        <td>
+                                                0.1
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </td>
+                                        
+                                        
+                                        <td>
+                                            0
+                                        </td>
+                                    </tr><tr role="row" class="even">
+                                        <td><a href="http://localhost:8080/problem/23">
+                                                23</a></td>
+                                        <td class="sorting_1"><a href="http://localhost:8080/problem/23">
+                                                20</a></td>
+                                        <td>
+                                            #laptrinhweb
+                                        </td>
+                                        <td>
+                                                0.1
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                                
+                                            </td>
+                                        
+                                        
+                                        <td>
+                                            0
+                                        </td>
+                                    </tr></tbody>
+                        </table><div class="dataTables_info" id="example_info" role="status" aria-live="polite">Showing 1 to 10 of 19 entries</div><div class="dataTables_paginate paging_simple_numbers" id="example_paginate"><a class="paginate_button previous disabled" aria-controls="example" data-dt-idx="0" tabindex="0" id="example_previous">Previous</a><span><a class="paginate_button current" aria-controls="example" data-dt-idx="1" tabindex="0">1</a><a class="paginate_button " aria-controls="example" data-dt-idx="2" tabindex="0">2</a></span></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<footer>
+    
+<!-- Footer -->
+<style>
+    .footer-custom{
+        background-color: black; 
+        
+    }
+    #social-footer-icons{
+        display: inline-block;
+        align-items: center;
+        justify-content: space-between;
+    }
+</style>
+
+<footer class="page-footer footer-custom pt-4">
+    <!-- Footer Elements -->
+    <!-- Footer Elements -->
+  <div class="elementfooter" style="display: flex;width: 100%;height: 100%;">
+    <div class="left" style="width: 30%;height: 100%;">
+      <div class="texttxt" style="width: 40%;height: 100%;float: left;">
+      </div>
+    </div>
+    <div class="left" style="width: 40%;height: 100%;">
+      <div class="texttxt" style="height: 100%;">
+        <p style="text-align: center; color: white;">© Hutech | DP2T<br><a href="http://localhost:8080/about">About</a></p>
+      </div>
+    </div>
+    <div class="right" style="width: 30%;height: 100%;">
+        <div class="social" style="width: 30%;height: 100%;float: right;">
+          <a href="https://www.facebook.com/"><i class="fa fa-facebook" style="width: 22%;"></i></a>
+          <a href="https://www.instagram.com/?hl=en"><i class="fa fa-instagram" style="width: 22%;"></i></a>
+          <a href="https://www.pinterest.com/"><i class="fa fa-pinterest-p" style="width: 22%;"></i></a>
+          <a href="https://twitter.com/?lang=en"><i class="fa fa-twitter" style="width: 22%;"></i></a>
+        </div>
+    </div>
+  </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+  
+</footer>
+	<script type="text/javascript" src="./Problem Set _ CodeRace_files/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="./Problem Set _ CodeRace_files/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="./Problem Set _ CodeRace_files/script.js"></script>
+    <script type="text/javascript" src="./Problem Set _ CodeRace_files/bootstrap.min(1).js"></script>
+
+
+</body></html>
